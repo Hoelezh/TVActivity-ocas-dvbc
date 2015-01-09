@@ -1,0 +1,82 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/tv_udrm_info"
+    android:layout_width="fill_parent"
+    android:layout_height="580px"
+    android:layout_alignParentBottom="true"
+    android:layout_centerHorizontal="true"
+    android:layout_marginBottom="92px"
+    android:layout_marginLeft="330sp"
+    android:layout_marginRight="330sp"
+    android:background="@drawable/tv_setting_bg"
+    android:orientation="vertical"
+    android:paddingTop="10sp" >
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.0"
+        android:paddingTop="10sp"
+        android:text="Version                    DVB-C_20141118"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textSize="30sp" />
+
+    <TableLayout
+        android:id="@+id/TableLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.0"
+        android:paddingLeft="30sp" >
+
+        <TableRow
+            android:id="@+id/TableRow"
+            android:layout_width="wrap_content"
+            android:layout_height="36dp"
+            android:layout_marginTop="10dp" >
+
+            <TextView
+                android:id="@+id/TextView14"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.2"
+                android:text="@string/rs_udrm_sn"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textSize="28sp" />
+
+            <TextView
+                android:id="@+id/tv_udrm_sn"
+                android:layout_width="0dp"
+                android:layout_height="32dp"
+                android:layout_weight="2"
+                android:text="1234567893301234"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textSize="28sp" />
+        </TableRow>
+        
+ 			 <TableRow
+            android:id="@+id/TableRow11"
+            android:layout_width="wrap_content"
+            android:layout_height="36dp"
+            android:layout_marginTop="10dp" >
+
+            <TextView
+                android:id="@+id/TextView15"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.2"
+                android:text="@string/mac_id"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textSize="28sp" />
+
+            <TextView
+                android:id="@+id/tv_mac"
+                android:layout_width="0dp"
+                android:layout_height="32dp"
+                android:layout_weight="2"
+                android:text="22:33:33:33:33:33:33"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textSize="28sp" />
+        </TableRow>
+    </TableLayout>
+
+</LinearLayout>
