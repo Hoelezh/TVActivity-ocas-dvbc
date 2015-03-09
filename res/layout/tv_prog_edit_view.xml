@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/tv_prog_edit_view"
+    android:background="@drawable/tv_source_bg"
+    android:layout_width="1280.0px"
+    android:layout_height="131.0px"
+    android:gravity="center"
+    android:textColor="#FFFFFF"
+    android:textSize="30.0px"
+    android:text="@string/rs_prog_edit_strl"
+    android:layout_alignParentBottom="true"
+    android:layout_centerHorizontal="true"
+    android:layout_marginBottom="92.0px" />

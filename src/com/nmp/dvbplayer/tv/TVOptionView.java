@@ -31,7 +31,7 @@ public class TVOptionView extends TVWidget {
 	private TVWidget     mSettingWidget;
 	private TVWidget     mSerachWidget;
 	private TVWidget     mUdrmWidget;	
-
+	private TVWidget     mPrgEditWidget;
 	private int     mCurrentIdx;
 	private boolean mFocus;
 	private int     mStartPos;
@@ -63,7 +63,7 @@ public class TVOptionView extends TVWidget {
 		this.mSettingWidget = null;
 		this.mSerachWidget = null;
 		this.mUdrmWidget = null;
-
+		this.mPrgEditWidget = null;
 		this.mWidgets = new ArrayList<TVWidget>();
 		this.focus(true);
 		
@@ -100,7 +100,10 @@ public class TVOptionView extends TVWidget {
 		}
 		if (null == this.mSerachWidget) {
 			this.mSerachWidget = new TVSearchView(this.mActivity);
-		}		
+		}	
+		if (null == this.mPrgEditWidget) {
+			this.mPrgEditWidget = new TVProgEditView(this.mActivity);
+		}
 		if (null == this.mUdrmWidget) {
 			this.mUdrmWidget = new TVUdrmView(this.mActivity);
 		}	
@@ -138,6 +141,10 @@ public class TVOptionView extends TVWidget {
 			drawId = R.drawable.tv_search_icon;
 			strId = R.string.tv_option_search;
 			this.addOption(drawId, strId, this.mSerachWidget);
+			
+			drawId = R.drawable.tv_setting_icon;
+			strId = R.string.rs_tv_prog_edit;		
+			this.addOption(drawId, strId, this.mPrgEditWidget);
 		}
 		
 		drawId = R.drawable.tv_setting_icon;

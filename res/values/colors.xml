@@ -6,4 +6,9 @@
     <color name="tv_unselected">#9E9E9E</color>
     <color name="tv_divider">#144662</color>
     <color name="black_overlay">#66000000</color>
+    <color name="blue_overlay">#660000ff</color>
+     <color name="gold">#daa520</color> 
+    <color name="trans">#00ffffff</color> 
+    <color name="royalblue">#4169e1</color>
+    <color name="gainsbore">#4169e1</color>
 </resources>

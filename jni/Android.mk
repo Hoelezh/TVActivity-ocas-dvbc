@@ -34,7 +34,7 @@ LOCAL_MODULE    := dvbagent
 LOCAL_SRC_FILES := com_dvb_DvbChannel.c  com_dvb_DvbSystem.c com_dvb_DvbSearch.c com_dvb_DvbPlayer.c  com_dvb_DvbEpg.c epgTest.c com_dvb_DvbSatellite.c\
 					systemTest.c com_dvb_DvbSystemSetting.c \
 					alidvb/alidvb_search.c alidvb/alidvb_system.c alidvb/db_callback.c alidvb/alidvb_player.c alidvb/alidvb_epg.c alidvb/alidvb_test.c alidvb/board_config_cstm.c \
-					com_dvb_DvbUdrm.c com_property.c
+					com_dvb_DvbUdrm.c com_property.c com_dvb_alitech_DvbProgNodeEdit.c
 LOCAL_LDLIBS := -llog
 LOCAL_C_INCLUDES += $(LOCAL_PATH)/alidvb/hld_inc/inc/ $(LOCAL_PATH)/alidvb/hld_inc/kernel/linux-linaro-3.4-rc3/include $(LOCAL_PATH)/alidvb/hld_inc/alidrivers/include $(LOCAL_PATH)/alidvb/ams_inc/
 LOCAL_SHARED_LIBRARIES := libcutils libams libadr_hld

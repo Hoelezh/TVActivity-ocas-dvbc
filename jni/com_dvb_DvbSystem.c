@@ -14,7 +14,7 @@
 #include "com_dvb_DvbSystemSetting.h"
 #include "com_dvb_DvbUdrm.h"
 #include "com_property.h"
-
+#include "com_dvb_alitech_DvbProgNodeEdit.h"
 #include "system.h"
 #include "alidvb_system.h"
 #include "alidvb/board_config_cstm.h"
@@ -117,6 +117,14 @@ static JNINativeMethod g_DvbPropery_Methods[] = {
 	{"set","(Ljava/lang/String;Ljava/lang/String;)V",(void *)Java_DvbProperty_set},
 
 };
+
+static JNINativeMethod g_DvbProgNodeEdit_Methods[] = {
+
+        {"deleteProg", "(I)Z", (void*)Java_DvbProgNodeEdit_deleteProg},
+        {"moveProg", "(II)Z", (void *)Java_DvbProgNodeEdit_moveProg},
+        {"updateData", "()Z", (void *)Java_DvbProgNodeEdit_updateData},
+ };
+
 
 JNIEXPORT jint JNICALL JNI_OnLoad(JavaVM* vm, void* reserved)
 {
@@ -242,6 +250,20 @@ JNIEXPORT jint JNICALL JNI_OnLoad(JavaVM* vm, void* reserved)
              return JNI_ERR;
          }
          nRes = (*env)->RegisterNatives(env, cls, g_DvbPropery_Methods, sizeof(g_DvbPropery_Methods)/sizeof(g_DvbPropery_Methods[0]));
+         if (nRes < 0)
+         {
+             LOGE("%s,%d:register method err!",__FUNCTION__,__LINE__);
+             return JNI_ERR;
+         }
+         
+        /*-----------------------DvbProgNodeEdit---------------*/
+         cls = (*env)->FindClass(env, Class_DvbProgNodeEditPath);
+         if (cls == NULL)
+         {
+        	 LOGE("%s,%d:get cls err!",__FUNCTION__,__LINE__);
+             return JNI_ERR;
+         }
+         nRes = (*env)->RegisterNatives(env, cls, g_DvbProgNodeEdit_Methods, sizeof(g_DvbProgNodeEdit_Methods)/sizeof(g_DvbProgNodeEdit_Methods[0]));
          if (nRes < 0)
          {
              LOGE("%s,%d:register method err!",__FUNCTION__,__LINE__);

@@ -99,4 +99,5 @@
     <string name="tv_search_change_tp">Scanning: </string>
     <string name="tv_search_has_get">Scanned: </string>
     <string name="tv_search_programs">Programs</string>
+    <string name="rs_tv_prog_edit">Edit Prog</string>
 </resources>

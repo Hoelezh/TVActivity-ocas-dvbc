@@ -540,6 +540,42 @@ int ALiDVB_DeleteNode(int type ,int node_id)
 	
 }
 
+int ALiDVB_DeleteNodeExt(int type ,int node_id) 
+{
+	int count;
+	if(type == TYPE_SAT_NODE)
+	{
+		amsdb_del_child(TYPE_PROG_NODE, TYPE_SAT_NODE,  node_id);
+		amsdb_del_child(TYPE_TP_NODE, TYPE_SAT_NODE,  node_id);
+	}
+	else if(type == TYPE_TP_NODE)
+	{
+		amsdb_del_child(TYPE_PROG_NODE, TYPE_TP_NODE,  node_id);
+	}
+
+	return  amsdb_del_node_byid(type, node_id);
+	
+}
+
+
+int ALiDVB_ProgMove(int src_pos ,int dst_pos) 
+{
+//    LOGE("%s():(%d -> %d)!", __FUNCTION__,src_pos,dst_pos);
+    return amsdb_move_node(TYPE_PROG_NODE,src_pos,dst_pos);
+#if 0
+    if(DB_SUCCES == amsdb_move_node(TYPE_PROG_NODE,src_pos,dst_pos))
+    {
+        return amsdb_update_data();
+    }
+
+    return !DB_SUCCES;
+#endif
+}
+
+int ALiDVB_DbUpdateData(void) 
+{
+    return amsdb_update_data();
+}
 
 int ALiDVB_GetSatNode(int pos, ALiDVB_SatelliteNode *node)
 {

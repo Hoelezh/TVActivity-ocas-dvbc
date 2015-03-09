@@ -23,6 +23,7 @@
 #define Class_DvbSystemSettingPath		"com/alitech/dvb/DvbSyetemSetting"
 #define Class_DvbUdrmPath "com/alitech/dvb/DvbUdrm"
 #define Class_DvbPropertyPath "com/alitech/dvb/DvbProperty"
+#define Class_DvbProgNodeEditPath "com/alitech/dvb/DvbProgNodeEdit"
 
 
 #define Class_Sig_DvbFrontend "Lcom/alitech/dvb/DvbChannelNode$DvbFrontend;"

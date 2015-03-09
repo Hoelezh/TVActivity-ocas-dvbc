@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/tv_prg_edit"
+     android:layout_width="1280.0px"
+    android:layout_height="720.0px"
+    android:background="@drawable/tv_search_bg"  >
+    
+	<TextView
+    	android:id="@+id/tv_prg_edit_title"
+    	android:layout_width="match_parent"
+    	android:layout_height="110.0px"
+    	android:gravity="center"
+    	android:textSize="32.0px"	
+    	android:textColor="@color/tv_white"
+   		android:focusable="false"
+    	android:text="@string/rs_tv_prog_edit"/>
+	
+	<ListView
+        android:id="@+id/tv_prg_listview"
+        android:layout_marginTop="40sp"
+        android:layout_marginLeft="20.0px"
+        android:layout_width="640.0px"
+        android:layout_height="420.0px" 
+        android:focusable="true"
+        android:layout_below="@id/tv_prg_edit_title" />
+	
+	 <RelativeLayout
+	    android:id="@+id/tv_prgedit_help" 
+	    android:layout_marginTop="40sp"
+	    android:layout_marginLeft="40sp"
+        android:layout_width="500.0px"
+        android:layout_height="420.0px" 
+        android:focusable="false"
+        android:layout_toRightOf="@id/tv_prg_listview"
+        android:layout_below="@id/tv_prg_edit_title">
+        <TextView
+    		android:id="@+id/tv_prg_edit_help_title"
+    		android:layout_width="match_parent"
+    		android:layout_height="wrap_content"
+    		android:gravity="center"
+    		android:textSize="30.0px"	
+    		android:textColor="@color/gainsbore"
+   			android:focusable="false"
+    		android:text="@string/rs_prog_edit_help_title"/>
+        <TextView
+    		android:id="@+id/tv_prg_edit_help_info"
+    		android:layout_width="match_parent"
+    		android:layout_height="wrap_content"
+    		android:textSize="30.0px"	
+    		android:textColor="@color/gainsbore"
+   			android:focusable="false"
+    		android:text="@string/rs_prog_edit_help_info"
+    		android:layout_below="@id/tv_prg_edit_help_title"/>
+     </RelativeLayout >
+	
+	<Button
+    	android:id="@+id/tv_prg_cancle_edit"
+    	android:background="@drawable/tv_progedit_button"
+    	android:layout_width="230.0px"
+    	android:layout_height="68.0px"
+    	android:layout_marginTop="20sp"
+    	android:layout_marginLeft="170sp"
+    	android:text="@string/rs_prog_edit_cancle"
+    	android:textSize="30.0px"
+    	android:textColor="@color/tv_white"
+    	android:gravity="center"
+    	android:focusable="true"
+    	android:layout_below="@id/tv_prg_listview"/>
+	
+	<Button
+        android:id="@+id/tv_prg_save_edit"
+        android:background="@drawable/tv_progedit_button"
+        android:layout_width="230.0px"
+        android:layout_height="68.0px"
+        android:layout_marginLeft="120sp"
+        android:layout_marginTop="20sp"
+        android:text="@string/rs_prog_edit_save"
+        android:textSize="30.0px"
+    	android:textColor="@color/tv_white"
+        android:layout_below="@id/tv_prg_listview"
+        android:layout_toRightOf="@id/tv_prg_cancle_edit"
+        android:gravity="center"
+        android:focusable="true"/>
+	
+	<Button
+        android:id="@+id/tv_prg_delet_all"
+        android:background="@drawable/tv_progedit_button"
+        android:layout_width="230.0px"
+        android:layout_height="68.0px"
+        android:layout_marginTop="20sp"
+        android:layout_marginLeft="120sp"
+        android:text="@string/rs_prog_edit_deletall"
+        android:textSize="30.0px"
+        android:textColor="@color/tv_white"
+        android:layout_below="@id/tv_prg_listview"
+        android:layout_toRightOf="@id/tv_prg_save_edit"
+        android:gravity="center"
+        android:focusable="true"/>
+    	
+</RelativeLayout>

@@ -257,4 +257,11 @@
     <string name="tv_cancelbutton">取消</string>
     <string name="tv_setting_textv2">设置</string>
     <string name="mac_id">Mac</string>
+    <string name="rs_tv_prog_edit">节目编辑</string>
+    <string name="rs_prog_edit_save">保存节目编辑</string>
+    <string name="rs_prog_edit_cancle">取消节目编辑</string>
+    <string name="rs_prog_edit_deletall">删除所有节目</string>
+    <string name="rs_prog_edit_strl">按“确定”进入编辑页面</string>
+    <string name="rs_prog_edit_help_title">操作说明</string>
+    <string name="rs_prog_edit_help_info">“左”键用于标记删除或者取消删除标记；“右”键用于标记移动或者取消移动标记。当标记为移动时，按上下键可以移动节目。</string>
 </resources>

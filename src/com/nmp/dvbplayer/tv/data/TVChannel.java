@@ -11,9 +11,10 @@ public class TVChannel extends TVObject {
 	private String   mChnNumber;
 	private boolean  mFavorite;
 	private int      mType;
-	
+	private int 	mProgId;
 	public TVChannel(int id, String name, String number) {
 		super(id, name);
+		this.mProgId = id;
 		this.mChnNumber = number;
 		this.mFavorite = false;
 		this.mType = NET_TV_NODE;
@@ -37,6 +38,11 @@ public class TVChannel extends TVObject {
 	
 	public int getType() {
 		return this.mType;
+	}
+	
+	public int getProgId()
+	{
+		return this.mProgId;
 	}
 
 }
